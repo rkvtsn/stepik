@@ -16,7 +16,7 @@ def application(environ, start_response):
 
     start_response(status, headers)
 
-    if environ.contains('QUERY_STRING'):
+    if environ.has_key('QUERY_STRING'):
         return environ['QUERY_STRING'].split("&")
     else:
         return [""]
