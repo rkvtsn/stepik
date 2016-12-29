@@ -3,7 +3,7 @@ Simple wsgi script
 '''
 
 
-def wsgi_application(environ, start_response):
+def app(environ, start_response):
     '''
     simple wsgi function
     '''
