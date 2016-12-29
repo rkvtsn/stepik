@@ -14,7 +14,7 @@ def application(environ, start_response):
         ('Content-Type', 'text/plain'),
     ]
 
-    body = "Helloo" #environ['QUERY_STRING']
+    body = environ['QUERY_STRING']
 
     start_response(status, headers)
 
