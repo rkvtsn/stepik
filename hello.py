@@ -14,9 +14,10 @@ def application(environ, start_response):
         ('Content-Type', 'text/plain'),
     ]
 
-    body = environ['QUERY_STRING']
-
     start_response(status, headers)
 
-    return [body]
+    if environ.contains('QUERY_STRING'):
+        return environ['QUERY_STRING'].split("&")
+    else:
+        return [""]
 
